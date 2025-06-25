@@ -1,0 +1,169 @@
+body {
+  background-color: #f0f4f8; /* fondo muy suave, casi celeste */
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #334e68; /* azul grisáceo oscuro para texto */
+  line-height: 1.6;
+}
+
+.title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #3b6978; /* azul medio amigable */
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(255 255 255 / 0.8);
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5886a5; /* azul suave */
+  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.button {
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  background: linear-gradient(
+    135deg,
+    #f6d365,
+    #fda085
+  ); /* naranja pastel cálido */
+  color: #4a4a4a; /* texto gris oscuro */
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(253, 160, 133, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+.button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(253, 160, 133, 0.6);
+  background: linear-gradient(135deg, #f7c672, #ffaf7b);
+}
+
+.button:disabled {
+  background: #fcd5b2;
+  cursor: wait;
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+.logo {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 40%;
+  transform: translate(-50%, -50%);
+  opacity: 0.12;
+  z-index: -1;
+  user-select: none;
+}
+
+.container-movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card.movie {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 16px;
+  max-width: 360px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(145deg, #1f2937, #2c3342);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.cardTextPrimary {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #facc15;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.cardPoster-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.cardPoster {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.cardRanking {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #facc15;
+  color: #1f2937;
+  width: 2.3rem;
+  height: 2.3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cardTextSecundary {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: #e5e7eb;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.cardTrailer {
+  font-size: 1rem;
+  color: #3b82f6;
+  text-decoration: underline;
+  align-self: center;
+  margin-top: auto;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #2563eb;
+  }
+}
